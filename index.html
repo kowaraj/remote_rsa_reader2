@@ -1,0 +1,21 @@
+<html>
+<head> </head>
+<script>
+async function get_ts() {
+  const response = await fetch('https://asuseepc900/rsa_key_timestamp.txt');
+  const t = await response.text();
+  console.log(t);
+  p = document.getElementById("ts");
+  p.innerText = t;
+}
+get_ts()
+</script>
+
+
+
+<body> 
+<p id="ts" style="font-size:400%" >NONE</p>
+<img src="rsa_key_captured.jpeg" alt="Smiley face" height="720" width="1020">
+
+ </body>
+</html>
